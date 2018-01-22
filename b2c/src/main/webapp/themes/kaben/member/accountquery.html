@@ -1,0 +1,48 @@
+<#include 'member_header.html' />
+<!-- 获得会员申请退货、换货列表标签 -->
+<#assign accBackListTag = newTag("accBackListTag")>
+<!-- 调用会员申请退货、换货列表标签 -->
+<#assign result = accBackListTag()>
+<div class="member-return-list">
+	<h1>账户明细</h1>
+	<div class="member-return-table">
+		<table>
+			<tr>
+				<th>交易时间</th>
+				<th>进账</th>
+				<th>出账</th>
+				<th>余额</th>
+				<!-- <th>摘要</th> -->
+			</tr>
+			<#if result.resultList?size gt 0 >
+			<#list result.resultList as Esacc>
+				<tr>
+					<td><@dateformat time="${ Esacc.bill_date?c}" pattern="yyyy-MM-dd HH:mm"/></td>
+					<td>${Esacc.bill_in}</td>
+					<td>${Esacc.bill_out}
+					</td>
+					<td>${Esacc.bill_balance}</td>
+					<!-- <td>${Esacc.account}</td> -->
+				</tr>
+			</#list>
+		</table>
+		<@pager pageno="${result.page}" pagesize="${result.pageSize}" totalcount="${result.totalCount}" />
+		<#else>
+		</table>
+				<div class="member-comment-wait">
+					<p class="member-right-blank">抱歉，暂时没有符合数据</p>
+				</div>
+		</#if>
+	</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<script>
+	$(function(){
+		selectMenu(3);
+	})
+</script>
+<#include '../common/footer.html'/>

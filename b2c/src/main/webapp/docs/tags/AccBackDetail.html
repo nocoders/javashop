@@ -1,0 +1,93 @@
+<#assign title= "退货单实体信息" ><#include '../header.html' />
+<!--手册开始-->
+<div id="top_nav">
+	<h1>标签、API使用手册</h1>
+</div>
+<!--手册结束-->
+<!--正文-->
+<div id="main">
+	<div class="menu_list">
+<#include 'tags_menu.html' />
+	</div>
+	<div class="right_list">
+		<h3>AccBackList </h3>
+		<h2>需要简述</h2>
+		<h6>返回商品列表中的字段</h6>
+		<div class="intro">	
+			<div class="same" id="parameter">
+				<h2>输入参数</h2>
+				<table cellspacing="0">
+					<tr>
+						<th>名称</th>
+						<th>类型</th>
+						<th>描述</th>
+					</tr>
+					<tr>
+						<td>bill_id</td>
+						<td>Integer</td>
+						<td>ID</td>
+					</tr>
+					<tr>
+						<td>bill_code</td>
+						<td>String</td>
+						<td>订单编号</td>
+					</tr>
+					<tr>
+						<td>bill_date</td>
+						<td>Long</td>
+						<td>账单日期</td>
+					</tr>
+					<tr>
+						<td>department</td>
+						<td>String</td>
+						<td>部门</td>
+					</tr>
+					<tr>
+						<td>bill_remark</td>
+						<td>String</td>
+						<td>账单摘要</td>
+					</tr>
+					
+					<tr>
+						<td>bill_in</td>
+						<td>Double</td>
+						<td>收入金额</td>
+					</tr>
+					<tr>
+						<td>bill_out</td>
+						<td>Double</td>
+						<td>支出金额</td>
+					</tr>
+					
+					<tr>
+						<td>bill_balance</td>
+						<td>Double</td>
+						<td>余额</td>
+					</tr>
+					<tr>
+						<td>account</td>
+						<td>String</td>
+						<td>用途</td>
+					</tr>
+					<tr>
+						<td>member_id</td>
+						<td>Integer</td>
+						<td>会员id</td>
+					</tr>
+				</table>
+		</div>
+	</div>
+</div>
+<#include '../fooder.html'>
+
+<!--正文结束-->
+</body>
+</html>
+
+
+
+
+
+
+
+

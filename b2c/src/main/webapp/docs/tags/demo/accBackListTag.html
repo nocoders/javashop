@@ -1,0 +1,9 @@
+<!-- 创建退货申请商品列表标签 -->
+<#assign accBackListTag= newTag("accBackListTag")>
+<!-- 调用退货申请商品列表,传递参数acid:1 -->
+<#assign accBackList = accBackListTag()>
+<#list accBackList.resultList as list>
+id ${list.id} 
+
+</#list>
+
